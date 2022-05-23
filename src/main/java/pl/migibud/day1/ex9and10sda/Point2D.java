@@ -1,5 +1,7 @@
 package pl.migibud.day1.ex9and10sda;
 
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Objects;
 
 public class Point2D implements Movable {
@@ -46,4 +48,5 @@ public class Point2D implements Movable {
         this.x+= moveDirection.getX();
         this.y+= moveDirection.getY();
     }
+
 }

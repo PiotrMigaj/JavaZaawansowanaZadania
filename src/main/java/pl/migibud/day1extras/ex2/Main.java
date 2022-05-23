@@ -16,6 +16,7 @@ public class Main {
         Programmer programmer5 = new Programmer(new Person("Anna","Umber",17,Gender.FEMALE), List.of("Pascal","Python","Java"));
         Programmer programmer6 = new Programmer(new Person("Maria","Umber",16,Gender.FEMALE), List.of("c#","Python","JAVA"));
         Programmer programmer7 = new Programmer(new Person("Maria","Umber",16,Gender.FEMALE), List.of("Java","c#"));
+        Programmer programmer8 = new Programmer(new Person("Kasia","Fiołek",16,Gender.FEMALE), List.of());
         itCompany.addProgrammerToCompany(programmer1);
         itCompany.addProgrammerToCompany(programmer2);
         itCompany.addProgrammerToCompany(programmer3);
@@ -23,16 +24,8 @@ public class Main {
         itCompany.addProgrammerToCompany(programmer5);
         itCompany.addProgrammerToCompany(programmer6);
         itCompany.addProgrammerToCompany(programmer7);
+        itCompany.addProgrammerToCompany(programmer8);
 
-        System.out.println(itCompany.getFemaleProgrammersWhoKnowsJavaAndCsharp().size());
-
-//        List<Person> maleProgrammist = itCompany.getProgrammerList()
-//                .stream()
-//                .map(v -> v.getPerson())
-//                .filter(v->v.getGender()==Gender.MALE)
-//                .collect(Collectors.toList());
-
-
+        System.out.println(itCompany.ifThereIsAPersonWhoDoesntKnowAnyLanguage());
     }
-
 }
