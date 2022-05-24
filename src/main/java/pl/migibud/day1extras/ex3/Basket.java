@@ -37,7 +37,7 @@ public class Basket {
     public List<Product> getListOfProductsWithCategoryComputerAddingExtraDiscount20Percent(){
         return this.orderList.stream()
                 .flatMap(v->v.getProductList().stream())
-                .map(v->v.setDicountedPrice(0.2))
+                .peek(v->v.setDicountedPrice(0.2))
                 .collect(Collectors.toList());
     }
 }

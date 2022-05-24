@@ -59,8 +59,8 @@ public class Main {
 
         System.out.println(basket.getListOfProductsWithCategoryComputerAndPriceHigherThan5000PLN().size());
 
-        computer1.setDicountedPrice(0.2);
-        System.out.println(computer1);
+
+        System.out.println(basket.getListOfProductsWithCategoryComputerAddingExtraDiscount20Percent());
 
 
 
