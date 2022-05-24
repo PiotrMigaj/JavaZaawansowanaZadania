@@ -28,7 +28,7 @@ public class Main {
                 .price(1500.0)
                 .build();
 
-        Order computerOrder = new Order(1540L, LocalDate.of(2022,01,20), List.of(computer1,computer2,computer3));
+        Order computerOrder = new Order(1540L, LocalDate.of(2022, 1,20), List.of(computer1,computer2,computer3));
 
         Product book1 = Product.builder()
                 .id(3566L)
@@ -51,16 +51,21 @@ public class Main {
                 .price(150.0)
                 .build();
 
-        Order bookOrder = new Order(2222L, LocalDate.of(2022,01,25), List.of(book1,book2,book3));
+        Order bookOrder = new Order(2222L, LocalDate.of(2022, 1,25), List.of(book1,book2,book3));
+        Order mixedOrder = new Order(1111L, LocalDate.of(2022, 2,25), List.of(book1,computer1));
 
         Basket basket = new Basket();
         basket.addOrderToBasket(computerOrder);
         basket.addOrderToBasket(bookOrder);
+        basket.addOrderToBasket(mixedOrder);
 
-        System.out.println(basket.getListOfProductsWithCategoryComputerAndPriceHigherThan5000PLN().size());
+//        System.out.println(basket.getListOfProductsWithCategoryComputerAndPriceHigherThan5000PLN().size());
 
 
-        System.out.println(basket.getListOfProductsWithCategoryComputerAddingExtraDiscount20Percent());
+//        System.out.println(basket.getCheapestProductWithCategoryComputer());
+//        System.out.println(basket.getListOfOrdersContainsProductWithCategoryBook().size());
+        System.out.println(basket.sumOfAllProductsFromOldestOrder());
+
 
 
 
