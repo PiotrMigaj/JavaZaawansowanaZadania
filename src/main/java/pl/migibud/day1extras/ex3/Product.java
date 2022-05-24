@@ -15,4 +15,8 @@ public class Product {
     private String name;
     private String category;
     private double price;
+
+    public void setDicountedPrice(double discount) {
+        this.price = price*(1-discount);
+    }
 }

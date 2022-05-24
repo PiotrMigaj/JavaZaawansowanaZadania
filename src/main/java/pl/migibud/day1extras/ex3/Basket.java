@@ -33,4 +33,11 @@ public class Basket {
                 .filter(v->v.getPrice()>5000.0)
                 .collect(Collectors.toList());
     }
+
+    public List<Product> getListOfProductsWithCategoryComputerAddingExtraDiscount20Percent(){
+        return this.orderList.stream()
+                .flatMap(v->v.getProductList().stream())
+                .map(v->v.setDicountedPrice(0.2))
+                .collect(Collectors.toList());
+    }
 }
