@@ -1,10 +1,8 @@
-package pl.migibud.day1.ex9and10sda;
+package pl.migibud.day1.ex9and10and11sda;
 
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Objects;
 
-public class Point2D implements Movable {
+public class Point2D implements Movable{
 
     private double x;
     private double y;
@@ -43,10 +41,14 @@ public class Point2D implements Movable {
         return Objects.hash(x, y);
     }
 
-    @Override
-    public void move(MoveDirection moveDirection) {
-        this.x+= moveDirection.getX();
-        this.y+= moveDirection.getY();
-    }
 
+    @Override
+    public boolean move(MoveDirection moveDirection) {
+        if (moveDirection==null){
+            return false;
+        }
+        this.x += moveDirection.getX();
+        this.y += moveDirection.getY();
+        return true;
+    }
 }
