@@ -26,6 +26,6 @@ public class Main {
         itCompany.addProgrammerToCompany(programmer7);
         itCompany.addProgrammerToCompany(programmer8);
 
-        System.out.println(itCompany.ifThereIsAPersonWhoDoesntKnowAnyLanguage());
+        System.out.println(itCompany.getNumbersAllLanguagesKnownByFemaleProgrammers());
     }
 }

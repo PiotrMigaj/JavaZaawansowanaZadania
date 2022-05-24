@@ -77,4 +77,13 @@ public class ITCompany {
         return this.programmerList.stream()
                 .anyMatch(v->v.getProgrammingLanguages().size()==0);
     }
+
+    public int getNumbersAllLanguagesKnownByFemaleProgrammers(){
+        return this.programmerList.stream()
+                .filter(v -> v.getPerson().getGender() == Gender.FEMALE)
+                .flatMap(v -> v.getProgrammingLanguages().stream())
+                .map(String::toLowerCase)
+                .collect(Collectors.toSet())
+                .size();
+    }
 }
