@@ -1,9 +1,8 @@
-package pl.migibud.day1.ex12.sortinglistofcars;
+package pl.migibud.day1.ex12and13.sortinglistofcars;
 
-import pl.migibud.day1.ex12.Car;
+import pl.migibud.day1.ex12and13.Car;
 
 import java.util.List;
-import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 class SortYearOfProductionDescending implements Sortable{

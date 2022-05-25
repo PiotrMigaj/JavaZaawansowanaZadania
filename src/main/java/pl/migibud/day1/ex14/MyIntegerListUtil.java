@@ -1,4 +1,4 @@
-package pl.migibud.day1.ex13;
+package pl.migibud.day1.ex14;
 
 import java.util.*;
 import java.util.function.Function;

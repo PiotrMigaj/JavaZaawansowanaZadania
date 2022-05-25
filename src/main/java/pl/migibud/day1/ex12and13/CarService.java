@@ -1,8 +1,8 @@
-package pl.migibud.day1.ex12;
+package pl.migibud.day1.ex12and13;
 
-import pl.migibud.day1.ex12.filteringcarsbyyearrealtion.FilterInRelationToYearStrategy;
-import pl.migibud.day1.ex12.sortinglistofcars.FilterParameter;
-import pl.migibud.day1.ex12.sortinglistofcars.SortingStrategy;
+import pl.migibud.day1.ex12and13.filteringcarsbyyearrealtion.FilterInRelationToYearStrategy;
+import pl.migibud.day1.ex12and13.sortinglistofcars.FilterParameter;
+import pl.migibud.day1.ex12and13.sortinglistofcars.SortingStrategy;
 
 import java.util.ArrayList;
 import java.util.Comparator;

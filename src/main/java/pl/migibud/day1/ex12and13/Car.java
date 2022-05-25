@@ -1,11 +1,10 @@
-package pl.migibud.day1.ex12;
+package pl.migibud.day1.ex12and13;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.ToString;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 

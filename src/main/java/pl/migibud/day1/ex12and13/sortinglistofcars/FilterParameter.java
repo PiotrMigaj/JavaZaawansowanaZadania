@@ -1,4 +1,4 @@
-package pl.migibud.day1.ex12.sortinglistofcars;
+package pl.migibud.day1.ex12and13.sortinglistofcars;
 
 public enum FilterParameter {
     PRICE_ASCENDING,

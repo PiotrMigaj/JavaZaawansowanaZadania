@@ -1,11 +1,10 @@
-package pl.migibud.day1.ex12;
+package pl.migibud.day1.ex12and13;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import pl.migibud.day1.ex12.sortinglistofcars.FilterParameter;
+import pl.migibud.day1.ex12and13.sortinglistofcars.FilterParameter;
 
 
-import java.util.ArrayList;
 import java.util.List;
 
 //import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
