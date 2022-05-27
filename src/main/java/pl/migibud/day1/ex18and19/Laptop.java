@@ -5,7 +5,7 @@ import lombok.Builder;
 
 import java.util.Objects;
 
-@Builder
+
 public class Laptop extends Computer{
 
     String battery;
