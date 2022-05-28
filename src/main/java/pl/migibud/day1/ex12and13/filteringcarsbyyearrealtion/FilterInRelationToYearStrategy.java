@@ -14,7 +14,7 @@ public class FilterInRelationToYearStrategy {
                         .filter(v->v.getYearOfProduction()<year)
                         .collect(Collectors.toList());
             default:
-                throw new RuntimeException("Wrong realtion operator");
+                throw new RuntimeException("Wrong relation operator");
         }
     }
 

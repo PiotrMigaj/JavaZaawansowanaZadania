@@ -13,9 +13,9 @@ import java.util.Objects;
 @Builder
 public class Manufacturer {
 
-    private String name;
-    private int yearOfEstablishment;
-    private String country;
+    private final String name;
+    private final int yearOfEstablishment;
+    private final String country;
 
     @Override
     public boolean equals(Object o) {
