@@ -1,4 +1,4 @@
-package pl.migibud.day1.ex17;
+package pl.migibud.day1.test;
 
 public enum ConversionType implements Conversion {
 

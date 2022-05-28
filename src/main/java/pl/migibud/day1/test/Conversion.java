@@ -1,4 +1,4 @@
-package pl.migibud.day1.ex17;
+package pl.migibud.day1.test;
 
 public interface Conversion {
     double executeConversion(int value);

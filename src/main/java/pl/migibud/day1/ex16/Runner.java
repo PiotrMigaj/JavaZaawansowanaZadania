@@ -1,5 +1,7 @@
 package pl.migibud.day1.ex16;
 
+import java.util.Arrays;
+
 public enum Runner {
     BEGINNER(360,380),
     INTERMEDIATE(300,359),
@@ -13,7 +15,7 @@ public enum Runner {
         this.maxNumbersOfMinutesOfMarathon=maxNumbersOfMinutesOfMarathon;
     }
 
-    public static Runner getFitnessLevel(int timeOfMarathon){
+/*    public static Runner getFitnessLevel(int timeOfMarathon){
         if (timeOfMarathon>=360&&timeOfMarathon<=380){
             return BEGINNER;
         }
@@ -24,6 +26,15 @@ public enum Runner {
             return ADVANCED;
         }
         return null;
+    }*/
+
+        public static Runner getFitnessLevel(int timeOfMarathon){
+
+            return Arrays.stream(values())
+                    .filter(r-> timeOfMarathon < r.maxNumbersOfMinutesOfMarathon)
+                    .filter(r->timeOfMarathon>r.minNumbersOfMinutesOfMarathon)
+                    .findAny()
+                    .orElseThrow(()->new RuntimeException("There is no such runner."));
     }
 
 }
