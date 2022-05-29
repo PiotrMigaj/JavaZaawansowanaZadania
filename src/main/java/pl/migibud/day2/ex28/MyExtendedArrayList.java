@@ -7,7 +7,7 @@ public class MyExtendedArrayList<E> extends ArrayList<E> {
 
     public List<E> getEveryNthElement(int startIndex, int skip){
         List<E> tmpList = new ArrayList<>();
-        for (int i=startIndex;i<this.size();i=i+skip){
+        for (int i=startIndex;i<this.size();i=i+skip+1){
             tmpList.add(this.get(i));
         }
         return tmpList;

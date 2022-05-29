@@ -10,6 +10,10 @@ public class Main {
         String myJoinedString = myJoiner.join(new Car("Seat LEON",30_000), new Car("VW Golf",50_000));
         System.out.println(myJoinedString);
 
+        JoinerWithStaticMethod joinerWithStaticMethod = new JoinerWithStaticMethod(separator);
+        String join = joinerWithStaticMethod.join(new Car("Seat LEON", 30_000), new Car("VW Golf", 50_000));
+        System.out.println(join);
+
 
     }
 
