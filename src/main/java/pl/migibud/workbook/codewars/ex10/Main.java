@@ -20,6 +20,11 @@ public class Main {
 
         System.out.println(collect);
 
+        int[] a = {1,2,3};
+        int[] b = {1,2,4};
+        System.out.println(a==b);
+        System.out.println(Arrays.equals(a,b));
+
     }
 
     public static int numberOfPairs(String[] gloves) {
