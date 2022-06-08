@@ -10,10 +10,26 @@ public class Main {
     public static void main(String[] args) {
 
         String text = "Hello, world. ?";
-        List<String> inputList = Arrays.stream(text.split(" ")).collect(Collectors.toList());
+        text = text
+                .replaceAll(","," ,")
+                .replaceAll("\\."," .");
+        System.out.println(text);
+
+        List<String> tmpList2 = Arrays.stream(text.split(" ")).collect(Collectors.toList());
+
+        String collect = Arrays.stream(text.split(" "))
+                .map(v -> v.matches("[a-zA-Z]+") ? v.substring(1).concat(v.substring(0, 1).concat("ay")) : v)
+                .collect(Collectors.joining(" "));
+
+        collect = collect
+                .replaceAll(" ,",",")
+                .replaceAll(" \\.",".");
+
+        System.out.println(collect);
+
 
         List<String> outPutList = new ArrayList<>();
-        for (String s : inputList) {
+        for (String s : tmpList2) {
             if (s.matches("[!?]")) {
                 outPutList.add(s);
                 continue;
