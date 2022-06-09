@@ -17,9 +17,10 @@ public class IntegerTest {
 
     public static void main(String[] args) {
 
-        IntegerTest integerTest = new IntegerTest();
+//        Integer integer = new Object();
 
-        System.out.println(integerTest);
 
     }
+
+
 }
