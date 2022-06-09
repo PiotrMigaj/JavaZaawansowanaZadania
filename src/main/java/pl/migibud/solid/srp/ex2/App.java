@@ -6,44 +6,59 @@ import java.util.List;
 import java.util.Scanner;
 
 public class App {
-    public static final int THRESHOLD = 5;
+	private static final int THRESHOLD = 5;
+	private static final Scanner SCANNER = new Scanner(System.in);
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        System.out.println("Welcome to the Application!");
+		System.out.println("Welcome to the Application!");
+		List<Integer> nums = getIntegers();
+		System.out.println(nums);
+		sort(nums);
+		print(nums);
+	}
 
-        Scanner scanner = new Scanner(System.in);
+	private static void print(List<Integer> nums) {
+		for (int num : nums) {
+			System.out.print(num + " ");
+		}
+	}
 
-        List<Integer> nums = new ArrayList<>();
+	private static void sort(List<Integer> nums) {
+		Collections.sort(nums);
+	}
 
-        System.out.println("Enter 5 valid integers in the range [0, 10]");
+	private static List<Integer> getIntegers() {
 
-        while(nums.size() < THRESHOLD) {
+		Scanner scanner = SCANNER;
+		List<Integer> nums = new ArrayList<>();
+		System.out.println("Enter 5 valid integers in the range [0, 10]");
+		while (nums.size() < THRESHOLD) {
 
-            String s = scanner.nextLine();
+			String s = scanner.nextLine();
+			if (!isInputValid(s)) {
+				continue;
+			}
+			int num = Integer.parseInt(s);
+			nums.add(num);
+		}
+		scanner.close();
+		return nums;
+	}
 
-            try {
-                Integer.parseInt(s);
-            } catch (NumberFormatException nfe) {
-                System.out.println("Invalid! Try again!");
-                continue;
-            }
+	private static boolean isInputValid(String input) {
 
-            int num = Integer.parseInt(s);
-
-            if(num<0 || num > 10) {
-                System.out.println("Invalid range! Try again!");
-                continue;
-            }
-
-            nums.add(num);
-        }
-
-        scanner.close();
-
-        Collections.sort(nums);
-
-        for(int num : nums)
-            System.out.print(num+" ");
-    }
+		try {
+			Integer.parseInt(input);
+		} catch (NumberFormatException e) {
+			System.out.println("Wrong input!");
+			return false;
+		}
+		int num = Integer.parseInt(input);
+		if (num < 0 || num > 10) {
+			System.out.println("Invalid range! Try again!");
+			return false;
+		}
+		return true;
+	}
 }
