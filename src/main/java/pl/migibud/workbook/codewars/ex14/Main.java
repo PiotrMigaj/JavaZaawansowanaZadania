@@ -10,7 +10,7 @@ public class Main {
 
         String text = "ala";
 
-        List<String> collect = IntStream.range(0, 3).mapToObj(i -> Arrays.stream(text.split("")).map(v -> v.repeat(i+1)).collect(Collectors.joining("-"))).collect(Collectors.toList());
+        List<String> collect = IntStream.range(0, 3).mapToObj(i -> Arrays.stream(text.split("")).limit(i).map(v -> v.repeat(i+1)).collect(Collectors.joining("-"))).collect(Collectors.toList());
         System.out.println(collect);
 
     }
