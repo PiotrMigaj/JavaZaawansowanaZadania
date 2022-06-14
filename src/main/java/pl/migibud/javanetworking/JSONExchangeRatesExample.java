@@ -43,9 +43,9 @@ public class JSONExchangeRatesExample {
 
         JSONObject jsonObject = new JSONObject(jsonStr);
         //JSONObject rates = jsonObject.getJSONObject("value");
-        String sample = jsonObject.getString("menu");
-        Object menu = jsonObject.get("");
-//        System.out.println(me);
+//        String sample = jsonObject.getString("menu");
+        String menu = jsonObject.getJSONObject("menu").getString("value");
+        System.out.println(menu);
 //        JSONObject rates = jsonObject.getJSONObject("rates");
 //        String currency = jsonObject.getString("currency");
 //        System.out.println(currency);
