@@ -37,5 +37,7 @@ public class Counter {
         Counter counter = new Counter();
         int i = counter.countSheeps(array2);
         System.out.println(i);
+
+
     }
 }
