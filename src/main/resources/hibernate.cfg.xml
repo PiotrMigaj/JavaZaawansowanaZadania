@@ -11,6 +11,6 @@
         <property name="connection.username">root</property>
         <property name="connection.password">migi987</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <mapping resource="employee.hbm.xml"></mapping>
+        <mapping class="pl.migibud.hibernate.ex1.Employee"></mapping>
     </session-factory>
 </hibernate-configuration>

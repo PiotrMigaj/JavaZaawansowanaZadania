@@ -26,8 +26,9 @@ public class BasicDatabaseSave {
         Transaction transaction = session.beginTransaction();
 
         Employee employee = Employee.builder()
-                .name("Ania")
+                .name("Joanna")
                 .surname("Migaj")
+                .address("ul.Dluga 16,51-180 Psary")
                 .age(28)
                 .build();
 //        employee.setId(1);
