@@ -1,7 +1,6 @@
 package pl.migibud.workbook.codewars.ex16;
 
 import java.util.*;
-import java.util.function.IntUnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -9,7 +8,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		String high = high("man i need a taxi up to ubud");
+		String high = high("what time are we climbing up to the volcano");
 
 		System.out.println(high);
 
