@@ -50,5 +50,11 @@ public class Main {
 //                        .toArray();
 //            }
 //        }
+
+        PrimitiveIterator.OfInt iterator = Arrays.stream(ints).iterator();
+
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
     }
 }
