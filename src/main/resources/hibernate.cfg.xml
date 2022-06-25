@@ -14,5 +14,7 @@
         <mapping class="pl.migibud.hibernate.ex1.Employee"></mapping>
         <mapping class="pl.migibud.hibernate.ex2.model.Question"></mapping>
         <mapping class="pl.migibud.hibernate.ex2.model.Answer"></mapping>
+        <mapping class="pl.migibud.hibernate.ex3.model.Parcel"></mapping>
+        <mapping class="pl.migibud.hibernate.ex3.model.ParcelAddress"></mapping>
     </session-factory>
 </hibernate-configuration>
