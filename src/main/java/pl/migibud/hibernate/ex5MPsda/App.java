@@ -3,8 +3,11 @@ package pl.migibud.hibernate.ex5MPsda;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 import pl.migibud.hibernate.ex5MPsda.model.Actor;
 import pl.migibud.hibernate.ex5MPsda.model.Movie;
+
+import java.util.List;
 
 public class App {
 	public static void main(String[] args) {
@@ -12,22 +15,27 @@ public class App {
 		Session session = sessionFactory.openSession();
 		Transaction transaction = session.beginTransaction();
 
-		Actor actor1 = new Actor("Piotr","Migaj",3.42);
-		Actor actor2 = new Actor("Anna","Migaj",9.42);
-
-		Movie movie1 = new Movie("Star Wars","George Lucas");
-		Movie movie2 = new Movie("Star Wars 2","George Lucas");
+//		Actor actor1 = new Actor("Piotr","Migaj",3.42);
+//		Actor actor2 = new Actor("Anna","Migaj",9.42);
+//
+//		Movie movie1 = new Movie("Star Wars","George Lucas");
+//		Movie movie2 = new Movie("Star Wars 2","George Lucas");
 
 //		actor1.addMovie(movie1);
 //		actor1.addMovie(movie2);
 
 //		movie2.addActor(actor2);
 
-		actor1.addMovie(movie1);
-		System.out.println(actor1.getMovies());
-
-		session.save(actor1);
+//		actor1.addMovie(movie1);
+//		System.out.println(actor1.getMovies());
+//
+//		session.save(actor1);
 //		session.save(actor2);
+
+		Query query = session.createQuery("FROM Actor");
+		List<Actor> actors = query.list();
+
+		actors.forEach(System.out::println);
 
 		transaction.commit();
 		session.close();
