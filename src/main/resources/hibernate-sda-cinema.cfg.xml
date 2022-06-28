@@ -7,16 +7,12 @@
     <session-factory>
         <property name="hbm2ddl.auto">update</property>
         <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
-        <property name="connection.url">jdbc:mysql://127.0.0.1:3306/company</property>
+        <property name="connection.url">jdbc:mysql://127.0.0.1:3306/cinema</property>
         <property name="connection.username">root</property>
         <property name="connection.password">Stefan0987</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <mapping class="pl.migibud.hibernate.ex1.Employee"></mapping>
-        <mapping class="pl.migibud.hibernate.ex2.model.Question"></mapping>
-        <mapping class="pl.migibud.hibernate.ex2.model.Answer"></mapping>
-        <mapping class="pl.migibud.hibernate.ex3.model.Parcel"></mapping>
-        <mapping class="pl.migibud.hibernate.ex3.model.ParcelAddress"></mapping>
-        <mapping class="pl.migibud.hibernate.ex4.model.Article"></mapping>
-        <mapping class="pl.migibud.hibernate.ex4.model.Tag"></mapping>
+        <mapping class="pl.migibud.hibernate.ex5MPsda.model.Actor"></mapping>
+        <mapping class="pl.migibud.hibernate.ex5MPsda.model.Movie"></mapping>
+
     </session-factory>
 </hibernate-configuration>
