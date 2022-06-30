@@ -48,6 +48,7 @@ public class ProjectDAODB implements AbstractDAOInterface<Project> {
         if (session!=null){
             session.close();
         }
+//        this.closeSessionFactory();
     }
 
     private void closeSessionWithTransaction(){
@@ -55,24 +56,34 @@ public class ProjectDAODB implements AbstractDAOInterface<Project> {
             transaction.commit();
             this.closeSession();
         }
+//        this.closeSessionFactory();
+    }
+
+    private void closeSessionFactory(){
+        if (this.sessionFactory!=null){
+            this.sessionFactory.close();
+        }
     }
 
     @Override
     public void persist(Project entity) {
         this.openSessionWithTransaction().save(entity);
         this.closeSessionWithTransaction();
+//        this.closeSessionFactory();
     }
 
     @Override
     public void update(Project entity) {
         this.openSessionWithTransaction().update(entity);
         this.closeSessionWithTransaction();
+        this.closeSessionFactory();
     }
 
     @Override
     public Project findById(Integer id) {
         Project project = (Project) openSession().get(Project.class,id);
         this.closeSession();
+        this.closeSessionFactory();
         return project;
     }
 
@@ -80,6 +91,7 @@ public class ProjectDAODB implements AbstractDAOInterface<Project> {
     public void delete(Project entity) {
         openSessionWithTransaction().delete(entity);
         closeSessionWithTransaction();
+        this.closeSessionFactory();
     }
 
     @Override
@@ -88,12 +100,14 @@ public class ProjectDAODB implements AbstractDAOInterface<Project> {
         for (Project p : projects) {
             this.delete(p);
         }
+        this.closeSessionFactory();
     }
 
     @Override
     public List<Project> findAll() {
         List<Project> projects = (List<Project>)openSession().createQuery("FROM Project").list();
         closeSession();
+        this.closeSessionFactory();
         return projects;
     }
 }

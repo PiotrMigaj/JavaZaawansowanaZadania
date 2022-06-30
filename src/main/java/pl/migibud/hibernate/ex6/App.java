@@ -14,9 +14,11 @@ public class App {
 
         projectService.persist(project);
 
-        List<Project> projectList = projectService.findAll();
+//        List<Project> projectList = projectService.findAll();
+//
+//        projectList.stream().forEach(System.out::println);
 
-        projectList.stream().forEach(System.out::println);
+
 
     }
 }
