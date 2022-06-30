@@ -1,6 +1,6 @@
 package pl.migibud.workbook.codewars.ex23;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,6 +11,27 @@ public class Main {
 
         String[] split = String.valueOf(number).split("");
 
-        Arrays.toString(split);
+        System.out.println(Arrays.toString(split));
+
+        Map<Integer,String> map = new TreeMap<>(Comparator.reverseOrder());
+
+        for (int i =0;i< split.length;i++){
+            map.put(i,split[split.length-i-1]);
+        }
+
+
+        Map.Entry<Integer,String> entry = map.entrySet().iterator().next();
+
+        String value = entry.getValue();
+        Integer key = entry.getKey();
+
+        String repeat = value+"0".repeat(key);
+
+        System.out.println(repeat);
+
+        System.out.println(entry);
+
+        System.out.println(map);
+
     }
 }
